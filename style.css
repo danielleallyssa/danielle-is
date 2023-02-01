@@ -1,40 +1,79 @@
 /* Box Model Hack */
 * {
-     box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
 
 /******************************************
 /* BASE STYLES
 /*******************************************/
 
-body {
-
+@font-face {
+  font-family: "Basteleur";
+  src: url(fonts/Basteleur-Moonlight.woff) format("woff"),
+    url(fonts/Basteleur-Moonlight.woff2) format("woff2");
 }
 
+body {
+  font-family: "Basteleur", sans-serif;
+  font-size: 16px;
+  line-height: 1.15;
+  background-color: pink;
+  background-image: linear-gradient(180deg, #fff, rgba(0, 0, 0, 0));
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
+section {
+  width: 60%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
+p {
+  font-size: 6rem;
+  margin: 32px 0;
+}
+
+div {
+  height: 20px;
+  width: 20px;
+  background-color: aqua;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 64px 32px;
 
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
 }
 
 /******************************************
