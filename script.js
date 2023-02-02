@@ -1,37 +1,40 @@
-// page number initial state
-let pageNumber = 0;
-
 // page content
 const pages = [
   {
-    text: "apple",
+    text: "a confirmed insomniac.",
     color: "red",
     circle: "blue",
     font: "Karrik",
   },
   {
-    text: "banana",
+    text: "kind of cold (it's freezing in here...)",
     color: "yellow",
     circle: "brown",
-    font: " LeMurmure",
+    font: "LeMurmure",
   },
   {
-    text: "cheese",
+    text: "a shining web dev.",
     color: "orange",
     circle: "green",
     font: "Pilowlava",
   },
   {
-    text: "donuts",
+    text: "really into RHOM. Larsa is a pain tho...",
     color: "brown",
     circle: "white",
     font: "Gulax",
   },
 ];
 
-// these variable select elements in HTML
+// page number variable initial state
+let pageNumber = 0;
+
+// these variable select elements in HTML for actions
 const nextTag = document.querySelector("footer img.next");
 const prevTag = document.querySelector("footer img.prev");
+const randomTag = document.querySelector("footer img.random");
+
+// these variable select elements in HTML for changes
 const h2Tag = document.querySelector("h2");
 const bodyTag = document.querySelector("body");
 const circleTag = document.querySelector("div.circle");
@@ -66,6 +69,16 @@ const previous = () => {
   updateContent();
 };
 
+// random action. page number will just be any number the length array
+
+const random = () => {
+  // variable for random number
+  let randomNum = Math.floor(Math.random() * pages.length);
+
+  pageNumber = randomNum;
+  updateContent();
+};
+
 // adding click events to icons/tags
 
 nextTag.addEventListener("click", function () {
@@ -74,4 +87,8 @@ nextTag.addEventListener("click", function () {
 
 prevTag.addEventListener("click", function () {
   previous();
+});
+
+randomTag.addEventListener("click", function () {
+  random();
 });
