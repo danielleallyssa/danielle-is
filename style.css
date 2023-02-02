@@ -18,13 +18,37 @@
 }
 
 /******************************************
-/* BASE STYLES
-/*******************************************/
+   /* BASE STYLES
+   /*******************************************/
 
 @font-face {
   font-family: "Basteleur";
   src: url(fonts/Basteleur-Moonlight.woff) format("woff"),
     url(fonts/Basteleur-Moonlight.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Karrik";
+  src: url(fonts/Karrik-Regular.woff) format("woff"),
+    url(fonts/Karrik-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "LeMurmure";
+  src: url(fonts/LeMurmure-Regular.woff) format("woff"),
+    url(fonts/LeMurmure-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Pilowlava";
+  src: url(fonts/Pilowlava-Regular.woff) format("woff"),
+    url(fonts/Pilowlava-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Gulax";
+  src: url(fonts/Gulax-Regular.woff) format("woff"),
+    url(fonts/Gulax-Regular.woff2) format("woff2");
 }
 
 body {
@@ -36,11 +60,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  transition: background ease-out 1s;
 }
 
 /******************************************
-/* LAYOUT
-/*******************************************/
+   /* LAYOUT
+   /*******************************************/
 section {
   width: 60%;
   position: fixed;
@@ -51,16 +76,17 @@ section {
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: 7rem;
   margin: 32px 0;
 }
 
-div {
+div.circle {
   height: 20px;
   width: 20px;
   background-color: aqua;
   border-radius: 50%;
   display: inline-block;
+  transition: background ease-out 0.75s;
 }
 
 footer {
@@ -77,5 +103,5 @@ footer {
 }
 
 /******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+   /* ADDITIONAL STYLES
+   /*******************************************/
