@@ -92,3 +92,19 @@ prevTag.addEventListener("click", function () {
 randomTag.addEventListener("click", function () {
   random();
 });
+
+// adding keyboard events to icons/tags
+
+document.addEventListener("keyup", function (e) {
+  console.log(e);
+
+  // if the key pressed is arrow right
+  if (e.key === "ArrowRight") {
+    next();
+  } else if (e.key === "ArrowLeft") {
+    // if the key pressed is arrow left
+    previous();
+  } else {
+    random();
+  }
+});
